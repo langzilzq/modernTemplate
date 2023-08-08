@@ -1,0 +1,40 @@
+html,
+body {
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background: linear-gradient(to bottom, transparent, #fff) #eceeef;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title {
+  display: flex;
+  margin: 4rem 0 4rem;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.logo {
+  width: 6rem;
+  margin: 7px 0 0 1rem;
+  cursor: pointer;
+}
+
+.name {
+  color: #4ecaff;
+}
