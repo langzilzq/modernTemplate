@@ -248,8 +248,8 @@ const RichText = (props: RichTextProps) => {
 
   useEffect(() => {
     const { selection } = editor;
-    let anchor
-    let focus
+    let anchor;
+    let focus;
     if (selection) {
       anchor = selection.anchor;
       focus = selection.focus;
@@ -288,7 +288,8 @@ const RichText = (props: RichTextProps) => {
         style={{
           width: 'calc(100% - 40px)',
           minHeight: 300,
-          padding: 10
+          padding: 10,
+          outline: 'none'
         }}
         readOnly={readonly}
         renderLeaf={renderLeaf}

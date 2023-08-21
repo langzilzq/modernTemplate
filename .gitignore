@@ -46,3 +46,5 @@ modern.config.local.js
 modern.config.local.mjs
 
 doc_build/
+
+pnpm-lock.yaml
