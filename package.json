@@ -1,10 +1,12 @@
 {
   "name": "myapp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
-    "reset": "npx rimraf ./**/node_modules",
+    "reset": "npx rimraf ./**/node_modules && pnpm i",
+    "setup": "pnpm i --frozen-lockfile",
     "dev": "modern dev",
     "build": "modern build",
+    "analyze": "modern build --analyze",
     "start": "modern start",
     "serve": "modern serve",
     "new": "modern new",
@@ -28,29 +30,25 @@
     "dist/"
   ],
   "dependencies": {
-    "@modern-js/runtime": "2.30.0",
-    "axios": "^1.4.0",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "slate": "^0.94.1",
-    "slate-history": "^0.93.0",
-    "slate-react": "^0.98.1"
+    "@modern-js/runtime": "2.58.2",
+    "axios": "^1.7.5",
+    "react": "~18.3.1",
+    "react-dom": "~18.3.1",
+    "slate": "^0.103.0",
+    "slate-history": "^0.109.0",
+    "slate-react": "^0.109.0"
   },
   "devDependencies": {
-    "@modern-js-app/eslint-config": "2.30.0",
-    "@modern-js/app-tools": "2.30.0",
-    "@modern-js/builder-rspack-provider": "2.30.0",
-    "@modern-js/eslint-config": "2.30.0",
-    "@modern-js/plugin-ssg": "2.30.0",
-    "@modern-js/tsconfig": "2.30.0",
-    "@types/jest": "~29.2.4",
-    "@types/node": "~16.11.7",
-    "@types/react": "~18.0.26",
-    "@types/react-dom": "~18.0.10",
-    "husky": "~8.0.1",
-    "lint-staged": "~13.1.0",
-    "prettier": "~2.8.1",
+    "@modern-js-app/eslint-config": "2.58.2",
+    "@modern-js/app-tools": "2.58.2",
+    "@modern-js/eslint-config": "2.58.2",
+    "@modern-js/tsconfig": "2.58.2",
+    "@types/react": "~18.3.4",
+    "@types/react-router-dom": "~5.3.3",
+    "@types/react-dom": "~18.3.0",
+    "husky": "~8.0.3",
+    "lint-staged": "~13.1.4",
     "rimraf": "~3.0.2",
-    "typescript": "~5.0.4"
+    "typescript": "~5.5.4"
   }
 }
