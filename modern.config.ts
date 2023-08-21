@@ -1,16 +1,18 @@
 import { appTools, defineConfig } from '@modern-js/app-tools';
-import { ssgPlugin } from '@modern-js/plugin-ssg';
+import { isDev } from './src/utils';
 
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig<'rspack'>({
   runtime: {
-    router: true
+    router: {
+      supportHtml5History: isDev
+    }
   },
   output: {
-    ssg: true,
+    assetPrefix: isDev ? undefined : './',
     polyfill: 'off',
     disableTsChecker: true,
-    disableSourceMap: true,
+    disableSourceMap: !isDev,
     distPath: { html: '' }
   },
   dev: {
@@ -27,5 +29,5 @@ export default defineConfig<'rspack'>({
   source: {
     mainEntryName: 'index'
   },
-  plugins: [appTools({ bundler: 'experimental-rspack' }), ssgPlugin()]
+  plugins: [appTools({ bundler: 'experimental-rspack' })]
 });
