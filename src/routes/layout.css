@@ -1,7 +1,6 @@
 html,
 body {
   font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-  background: linear-gradient(to bottom, transparent, #fff) #eceeef;
 }
 
 * {
@@ -37,4 +36,18 @@ body {
 
 .name {
   color: #4ecaff;
+}
+
+.hovering-toolbar {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+  background: #4e5969;
+  border: 1px solid #e5e6eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(33, 66, 115, .15);
+  height: 40px;
+  transform: translate3d(0, -100%, 0);
+  width: 68px;
+  z-index: 1;
 }
