@@ -1,4 +1,5 @@
 import { useNavigate } from '@modern-js/runtime/router';
+import ComAnimation from '@/components/ComAnimation';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -10,4 +11,8 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default () => (
+  <ComAnimation type="slide" distance={100}>
+    <Index />
+  </ComAnimation>
+);
