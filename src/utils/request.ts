@@ -4,8 +4,8 @@ const instance = axios.create({
   headers: {
     'Content-Type': 'application/json'
   },
-  timeout: 15000,
-  baseURL: '/web'
+  timeout: 1000 * 10,
+  baseURL: '/api'
 });
 
 export function request(opts: AxiosRequestConfig) {

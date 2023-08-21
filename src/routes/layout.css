@@ -1,7 +1,6 @@
 html,
 body {
-  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-  background: linear-gradient(to bottom, transparent, #fff) #eceeef;
+  font-family: PingFang SC, Microsoft YaHei, Arial, sans-serif;
 }
 
 * {
@@ -27,6 +26,34 @@ body {
   align-items: center;
   font-size: 4rem;
   font-weight: 600;
+  animation: loop 2s linear infinite;
+}
+
+.richtext {
+  display: flex;
+  justify-content: center;
+  max-height: 500px;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+@keyframes loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  66% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .logo {
@@ -37,4 +64,18 @@ body {
 
 .name {
   color: #4ecaff;
+}
+
+.hovering-toolbar {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+  background: #4e5969;
+  border: 1px solid #e5e6eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(33, 66, 115, .15);
+  height: 40px;
+  transform: translate3d(0, -100%, 0);
+  width: 68px;
+  z-index: 1;
 }
