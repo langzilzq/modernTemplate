@@ -1,6 +1,6 @@
 import { useNavigate } from '@modern-js/runtime/router';
-import ComAnimation from '@/components/ComAnimation';
 import RichText from '@/components/RichText';
+import ComAnimation from '@/components/ComAnimation';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ const Index = () => {
         />
         <p className="name">Modern.js</p>
       </div>
-      <RichText value="你好" />
+      <div className="richtext">
+        <RichText value="你好" />
+      </div>
     </div>
   );
 };
